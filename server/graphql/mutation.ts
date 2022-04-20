@@ -12,8 +12,8 @@ const register = {
     password: { type: GraphQLString }
   },
   async resolve(parent: any, args: any) {
-    const { username, email, password, displayName } = args;
-    const user = new User({ username, email, password, displayName });
+    const { name, email, password } = args;
+    const user = new User({ name, email, password });
 
     await user.save();
     const token = createJwtToken(user);

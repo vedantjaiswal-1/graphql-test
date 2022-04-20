@@ -3,9 +3,11 @@ import { graphqlHTTP } from "express-graphql";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { ConnectionOptions } from "tls";
+const cors = require('cors');
 const schema = require("./graphql/schema");
 
 const app = express();
+app.use(cors())
 
 dotenv.config();
 

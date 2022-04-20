@@ -1,4 +1,3 @@
-export {};
 const jwt = require("jsonwebtoken");
 
 const authenticate = async (req: any, res: any, next: any) => {
